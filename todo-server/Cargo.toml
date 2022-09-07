@@ -1,0 +1,20 @@
+[package]
+name = "todo-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.64"
+axum = "0.6.0-rc.1"
+hyper = "0.14.20"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.85"
+sqlx = { version = "0.6.1", features = ["runtime-tokio-native-tls", "sqlite"] }
+tokio = { version = "1.21.0", features = ["full"] }
+tower = "0.4.13"
+tower-http = { version = "0.3.4", features = ["trace", "add-extension"] }
+tracing = "0.1.36"
+tracing-subscriber = { version = "0.3.15", features = ["env-filter"] }
+
